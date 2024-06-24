@@ -109,7 +109,6 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Checksum.cs" />
-    <Compile Include="ConfiguracaoImagem.cs" />
     <Compile Include="Config_serial.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -118,20 +117,6 @@
     </Compile>
     <Compile Include="Crc16.cs" />
     <Compile Include="CRCITT.cs" />
-    <Compile Include="Display.cs" />
-    <Compile Include="Config_display.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Config_display.Designer.cs">
-      <DependentUpon>Config_display.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Enums.cs" />
-    <Compile Include="FrmMakeURL.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="FrmMakeURL.designer.cs">
-      <DependentUpon>FrmMakeURL.cs</DependentUpon>
-    </Compile>
     <Compile Include="frmTrucapture.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -152,16 +137,9 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Socket_Serial.cs" />
     <Compile Include="Trucaptureemulator.cs" />
     <EmbeddedResource Include="Config_serial.resx">
       <DependentUpon>Config_serial.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Config_display.resx">
-      <DependentUpon>Config_display.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="FrmMakeURL.resx">
-      <DependentUpon>FrmMakeURL.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmTrucapture.resx">
       <DependentUpon>frmTrucapture.cs</DependentUpon>
@@ -195,7 +173,6 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
-    <Content Include="favicon.ico" />
     <None Include="Resources\Close Window-24.png" />
     <None Include="Resources\limpar.png" />
     <None Include="Resources\close.png" />
@@ -212,7 +189,6 @@
     <None Include="Resources\SaveButton_Dis.png" />
     <None Include="Resources\SaveButton_pressed.png" />
     <Content Include="trucapture.ico" />
-    <Content Include="Versões.txt" />
     <None Include="Resources\trigger.png" />
     <None Include="Resources\stop2.png" />
     <None Include="Resources\pumalogo.bmp" />

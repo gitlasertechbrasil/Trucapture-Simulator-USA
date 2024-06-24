@@ -37,8 +37,6 @@
             this.label2 = new System.Windows.Forms.Label();
             this.cbxMM = new System.Windows.Forms.ComboBox();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.nupCaptura = new System.Windows.Forms.NumericUpDown();
-            this.label19 = new System.Windows.Forms.Label();
             this.nudVelmax = new System.Windows.Forms.NumericUpDown();
             this.nudVelmin = new System.Windows.Forms.NumericUpDown();
             this.label4 = new System.Windows.Forms.Label();
@@ -86,11 +84,12 @@
             this.cmbInterferencia = new System.Windows.Forms.ComboBox();
             this.label20 = new System.Windows.Forms.Label();
             this.groupBox9 = new System.Windows.Forms.GroupBox();
-            this.label25 = new System.Windows.Forms.Label();
             this.cmbIDs = new System.Windows.Forms.ComboBox();
+            this.label25 = new System.Windows.Forms.Label();
+            this.label19 = new System.Windows.Forms.Label();
+            this.nupSpeedCapture = new System.Windows.Forms.NumericUpDown();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.nupCaptura)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.nudVelmax)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.nudVelmin)).BeginInit();
             this.groupBox3.SuspendLayout();
@@ -111,6 +110,7 @@
             this.groupBox6.SuspendLayout();
             this.groupBox8.SuspendLayout();
             this.groupBox9.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.nupSpeedCapture)).BeginInit();
             this.SuspendLayout();
             // 
             // groupBox1
@@ -208,7 +208,7 @@
             // 
             // groupBox2
             // 
-            this.groupBox2.Controls.Add(this.nupCaptura);
+            this.groupBox2.Controls.Add(this.nupSpeedCapture);
             this.groupBox2.Controls.Add(this.label19);
             this.groupBox2.Controls.Add(this.nudVelmax);
             this.groupBox2.Controls.Add(this.nudVelmin);
@@ -216,40 +216,14 @@
             this.groupBox2.Controls.Add(this.label3);
             this.groupBox2.Location = new System.Drawing.Point(12, 120);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(373, 80);
+            this.groupBox2.Size = new System.Drawing.Size(373, 85);
             this.groupBox2.TabIndex = 6;
             this.groupBox2.TabStop = false;
-            this.groupBox2.Text = "Range Velocidade";
-            // 
-            // nupCaptura
-            // 
-            this.nupCaptura.Location = new System.Drawing.Point(88, 52);
-            this.nupCaptura.Maximum = new decimal(new int[] {
-            320,
-            0,
-            0,
-            0});
-            this.nupCaptura.Name = "nupCaptura";
-            this.nupCaptura.Size = new System.Drawing.Size(81, 20);
-            this.nupCaptura.TabIndex = 8;
-            this.nupCaptura.Value = new decimal(new int[] {
-            5,
-            0,
-            0,
-            0});
-            // 
-            // label19
-            // 
-            this.label19.AutoSize = true;
-            this.label19.Location = new System.Drawing.Point(41, 54);
-            this.label19.Name = "label19";
-            this.label19.Size = new System.Drawing.Size(47, 13);
-            this.label19.TabIndex = 7;
-            this.label19.Text = "Captura:";
+            this.groupBox2.Text = "Speed Range";
             // 
             // nudVelmax
             // 
-            this.nudVelmax.Location = new System.Drawing.Point(247, 23);
+            this.nudVelmax.Location = new System.Drawing.Point(247, 20);
             this.nudVelmax.Maximum = new decimal(new int[] {
             322,
             0,
@@ -261,7 +235,7 @@
             // 
             // nudVelmin
             // 
-            this.nudVelmin.Location = new System.Drawing.Point(88, 23);
+            this.nudVelmin.Location = new System.Drawing.Point(88, 20);
             this.nudVelmin.Maximum = new decimal(new int[] {
             322,
             0,
@@ -274,20 +248,20 @@
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(200, 25);
+            this.label4.Location = new System.Drawing.Point(200, 22);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(46, 13);
+            this.label4.Size = new System.Drawing.Size(30, 13);
             this.label4.TabIndex = 4;
-            this.label4.Text = "Máxima:";
+            this.label4.Text = "Max:";
             // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(43, 25);
+            this.label3.Location = new System.Drawing.Point(43, 22);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(45, 13);
+            this.label3.Size = new System.Drawing.Size(27, 13);
             this.label3.TabIndex = 3;
-            this.label3.Text = "Mínima:";
+            this.label3.Text = "Min:";
             // 
             // groupBox3
             // 
@@ -298,21 +272,21 @@
             this.groupBox3.Controls.Add(this.nudDistmin);
             this.groupBox3.Controls.Add(this.label5);
             this.groupBox3.Controls.Add(this.label6);
-            this.groupBox3.Location = new System.Drawing.Point(13, 202);
+            this.groupBox3.Location = new System.Drawing.Point(13, 205);
             this.groupBox3.Name = "groupBox3";
             this.groupBox3.Size = new System.Drawing.Size(373, 93);
             this.groupBox3.TabIndex = 7;
             this.groupBox3.TabStop = false;
-            this.groupBox3.Text = "Range Distância";
+            this.groupBox3.Text = "Distance Range";
             // 
             // label18
             // 
             this.label18.AutoSize = true;
             this.label18.Location = new System.Drawing.Point(194, 61);
             this.label18.Name = "label18";
-            this.label18.Size = new System.Drawing.Size(34, 13);
+            this.label18.Size = new System.Drawing.Size(37, 13);
             this.label18.TabIndex = 9;
-            this.label18.Text = "Valor:";
+            this.label18.Text = "Value:";
             // 
             // nudDecimalFixo
             // 
@@ -331,9 +305,9 @@
             this.ckbFixaDecimal.AutoSize = true;
             this.ckbFixaDecimal.Location = new System.Drawing.Point(49, 57);
             this.ckbFixaDecimal.Name = "ckbFixaDecimal";
-            this.ckbFixaDecimal.Size = new System.Drawing.Size(120, 17);
+            this.ckbFixaDecimal.Size = new System.Drawing.Size(104, 17);
             this.ckbFixaDecimal.TabIndex = 7;
-            this.ckbFixaDecimal.Text = "Fixar Ponto Decimal";
+            this.ckbFixaDecimal.Text = "Fix decimal point";
             this.ckbFixaDecimal.UseVisualStyleBackColor = true;
             // 
             // nudDistmax
@@ -365,18 +339,18 @@
             this.label5.AutoSize = true;
             this.label5.Location = new System.Drawing.Point(200, 25);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(46, 13);
+            this.label5.Size = new System.Drawing.Size(30, 13);
             this.label5.TabIndex = 4;
-            this.label5.Text = "Máxima:";
+            this.label5.Text = "Max:";
             // 
             // label6
             // 
             this.label6.AutoSize = true;
             this.label6.Location = new System.Drawing.Point(43, 25);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(45, 13);
+            this.label6.Size = new System.Drawing.Size(27, 13);
             this.label6.TabIndex = 3;
-            this.label6.Text = "Mínima:";
+            this.label6.Text = "Min:";
             // 
             // btnSalvar
             // 
@@ -384,7 +358,7 @@
             this.btnSalvar.Name = "btnSalvar";
             this.btnSalvar.Size = new System.Drawing.Size(112, 28);
             this.btnSalvar.TabIndex = 8;
-            this.btnSalvar.Text = "&Salvar";
+            this.btnSalvar.Text = "&Save";
             this.btnSalvar.UseVisualStyleBackColor = true;
             this.btnSalvar.Click += new System.EventHandler(this.btnSalvar_Click);
             // 
@@ -393,9 +367,9 @@
             this.label7.AutoSize = true;
             this.label7.Location = new System.Drawing.Point(418, 121);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(85, 13);
+            this.label7.Size = new System.Drawing.Size(74, 13);
             this.label7.TabIndex = 9;
-            this.label7.Text = "Serial do sensor:";
+            this.label7.Text = "Serial number:";
             // 
             // tbxSN
             // 
@@ -427,9 +401,9 @@
             this.label8.AutoSize = true;
             this.label8.Location = new System.Drawing.Point(252, 63);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(61, 13);
+            this.label8.Size = new System.Drawing.Size(65, 13);
             this.label8.TabIndex = 11;
-            this.label8.Text = "Altura (HT):";
+            this.label8.Text = "Height (HT):";
             // 
             // tbxMD
             // 
@@ -453,12 +427,12 @@
             this.groupBox4.Controls.Add(this.nupMinMultLeituras);
             this.groupBox4.Controls.Add(this.label10);
             this.groupBox4.Controls.Add(this.label11);
-            this.groupBox4.Location = new System.Drawing.Point(12, 294);
+            this.groupBox4.Location = new System.Drawing.Point(12, 301);
             this.groupBox4.Name = "groupBox4";
             this.groupBox4.Size = new System.Drawing.Size(373, 55);
             this.groupBox4.TabIndex = 15;
             this.groupBox4.TabStop = false;
-            this.groupBox4.Text = "Número de Leituras (Multiplas leituras ativado):";
+            this.groupBox4.Text = "Number of Measurements per cycle (multiple strings enabled):";
             // 
             // nupMaxMultLeituras
             // 
@@ -509,18 +483,18 @@
             this.label10.AutoSize = true;
             this.label10.Location = new System.Drawing.Point(200, 25);
             this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(46, 13);
+            this.label10.Size = new System.Drawing.Size(30, 13);
             this.label10.TabIndex = 4;
-            this.label10.Text = "Máximo:";
+            this.label10.Text = "Max:";
             // 
             // label11
             // 
             this.label11.AutoSize = true;
             this.label11.Location = new System.Drawing.Point(43, 25);
             this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(45, 13);
+            this.label11.Size = new System.Drawing.Size(27, 13);
             this.label11.TabIndex = 3;
-            this.label11.Text = "Mínimo:";
+            this.label11.Text = "Min:";
             // 
             // groupBox5
             // 
@@ -528,12 +502,12 @@
             this.groupBox5.Controls.Add(this.nupInfMultiLeituras);
             this.groupBox5.Controls.Add(this.label12);
             this.groupBox5.Controls.Add(this.label13);
-            this.groupBox5.Location = new System.Drawing.Point(11, 351);
+            this.groupBox5.Location = new System.Drawing.Point(11, 359);
             this.groupBox5.Name = "groupBox5";
             this.groupBox5.Size = new System.Drawing.Size(375, 55);
             this.groupBox5.TabIndex = 16;
             this.groupBox5.TabStop = false;
-            this.groupBox5.Text = "Variação da Distância (Multiplas leituras ativado):";
+            this.groupBox5.Text = "Distance Range (multiple strings enabled):";
             // 
             // nupSupMultLeituras
             // 
@@ -579,9 +553,9 @@
             this.label12.AutoSize = true;
             this.label12.Location = new System.Drawing.Point(199, 25);
             this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(49, 13);
+            this.label12.Size = new System.Drawing.Size(29, 13);
             this.label12.TabIndex = 4;
-            this.label12.Text = "Superior:";
+            this.label12.Text = "Top:";
             // 
             // label13
             // 
@@ -590,7 +564,7 @@
             this.label13.Name = "label13";
             this.label13.Size = new System.Drawing.Size(42, 13);
             this.label13.TabIndex = 3;
-            this.label13.Text = "Inferior:";
+            this.label13.Text = "bottom:";
             // 
             // pictureBox1
             // 
@@ -686,12 +660,12 @@
             // 
             this.groupBox7.Controls.Add(this.cmbSector4Type);
             this.groupBox7.Controls.Add(this.cmbDG);
-            this.groupBox7.Location = new System.Drawing.Point(10, 406);
+            this.groupBox7.Location = new System.Drawing.Point(10, 413);
             this.groupBox7.Name = "groupBox7";
             this.groupBox7.Size = new System.Drawing.Size(376, 57);
             this.groupBox7.TabIndex = 21;
             this.groupBox7.TabStop = false;
-            this.groupBox7.Text = "Estado DG && Setor 4";
+            this.groupBox7.Text = "DG State && Setor 4";
             // 
             // cmbSector4Type
             // 
@@ -734,12 +708,12 @@
             this.groupBox8.Controls.Add(this.tbxInterferenciaManual);
             this.groupBox8.Controls.Add(this.cmbInterferencia);
             this.groupBox8.Controls.Add(this.label20);
-            this.groupBox8.Location = new System.Drawing.Point(10, 465);
+            this.groupBox8.Location = new System.Drawing.Point(10, 469);
             this.groupBox8.Name = "groupBox8";
             this.groupBox8.Size = new System.Drawing.Size(373, 55);
             this.groupBox8.TabIndex = 22;
             this.groupBox8.TabStop = false;
-            this.groupBox8.Text = "Interferência:";
+            this.groupBox8.Text = "String Noise:";
             // 
             // btnCRC
             // 
@@ -780,20 +754,28 @@
             this.label20.AutoSize = true;
             this.label20.Location = new System.Drawing.Point(4, 25);
             this.label20.Name = "label20";
-            this.label20.Size = new System.Drawing.Size(31, 13);
+            this.label20.Size = new System.Drawing.Size(34, 13);
             this.label20.TabIndex = 6;
-            this.label20.Text = "Tipo:";
+            this.label20.Text = "Type:";
             // 
             // groupBox9
             // 
             this.groupBox9.Controls.Add(this.cmbIDs);
             this.groupBox9.Controls.Add(this.label25);
-            this.groupBox9.Location = new System.Drawing.Point(11, 523);
+            this.groupBox9.Location = new System.Drawing.Point(11, 525);
             this.groupBox9.Name = "groupBox9";
             this.groupBox9.Size = new System.Drawing.Size(373, 55);
             this.groupBox9.TabIndex = 23;
             this.groupBox9.TabStop = false;
-            this.groupBox9.Text = "Resposta do ID:";
+            this.groupBox9.Text = "ID Answer:";
+            // 
+            // cmbIDs
+            // 
+            this.cmbIDs.FormattingEnabled = true;
+            this.cmbIDs.Location = new System.Drawing.Point(33, 24);
+            this.cmbIDs.Name = "cmbIDs";
+            this.cmbIDs.Size = new System.Drawing.Size(329, 21);
+            this.cmbIDs.TabIndex = 8;
             // 
             // label25
             // 
@@ -804,20 +786,33 @@
             this.label25.TabIndex = 3;
             this.label25.Text = "ID:";
             // 
-            // cmbIDs
+            // label19
             // 
-            this.cmbIDs.FormattingEnabled = true;
-            this.cmbIDs.Location = new System.Drawing.Point(33, 24);
-            this.cmbIDs.Name = "cmbIDs";
-            this.cmbIDs.Size = new System.Drawing.Size(329, 21);
-            this.cmbIDs.TabIndex = 8;
+            this.label19.AutoSize = true;
+            this.label19.Location = new System.Drawing.Point(23, 59);
+            this.label19.Name = "label19";
+            this.label19.Size = new System.Drawing.Size(47, 13);
+            this.label19.TabIndex = 7;
+            this.label19.Text = "Capture:";
+            // 
+            // nupSpeedCapture
+            // 
+            this.nupSpeedCapture.Location = new System.Drawing.Point(88, 57);
+            this.nupSpeedCapture.Maximum = new decimal(new int[] {
+            322,
+            0,
+            0,
+            0});
+            this.nupSpeedCapture.Name = "nupSpeedCapture";
+            this.nupSpeedCapture.Size = new System.Drawing.Size(81, 20);
+            this.nupSpeedCapture.TabIndex = 8;
             // 
             // frmConfigSensor
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(534, 581);
+            this.ClientSize = new System.Drawing.Size(534, 583);
             this.Controls.Add(this.groupBox9);
             this.Controls.Add(this.groupBox8);
             this.Controls.Add(this.groupBox7);
@@ -843,13 +838,12 @@
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "frmConfigSensor";
-            this.Text = "Configurar Sensor";
+            this.Text = "Sensor Settings";
             this.Load += new System.EventHandler(this.frmConfigSensor_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.nupCaptura)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.nudVelmax)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.nudVelmin)).EndInit();
             this.groupBox3.ResumeLayout(false);
@@ -876,6 +870,7 @@
             this.groupBox8.PerformLayout();
             this.groupBox9.ResumeLayout(false);
             this.groupBox9.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.nupSpeedCapture)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -922,8 +917,6 @@
         private System.Windows.Forms.Label label18;
         private System.Windows.Forms.NumericUpDown nudDecimalFixo;
         private System.Windows.Forms.CheckBox ckbFixaDecimal;
-        private System.Windows.Forms.NumericUpDown nupCaptura;
-        private System.Windows.Forms.Label label19;
         private System.Windows.Forms.Label label15;
         private System.Windows.Forms.Label label14;
         private System.Windows.Forms.NumericUpDown nupTempoMinMultLeituras;
@@ -943,5 +936,7 @@
         private System.Windows.Forms.GroupBox groupBox9;
         private System.Windows.Forms.ComboBox cmbIDs;
         private System.Windows.Forms.Label label25;
+        private System.Windows.Forms.NumericUpDown nupSpeedCapture;
+        private System.Windows.Forms.Label label19;
     }
 }

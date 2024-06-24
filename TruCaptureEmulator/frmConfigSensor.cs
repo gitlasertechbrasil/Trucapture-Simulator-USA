@@ -26,7 +26,7 @@ namespace TruCaptureEmulator
             {
                 if(!VerifySerialNumber(tbxSN.Text))
                 {
-                    throw new Exception("Verifique o formato do serial number.");
+                    throw new Exception("Check sensor serial number pattern.");
                 }
 
                 string[] temp = tbxMD.Text.Split(',');
@@ -36,7 +36,7 @@ namespace TruCaptureEmulator
                 if (min < 15 || min > 70 || med < 15 || med > 70 || max < 15 || max > 70 ||
                    (min >= max || min >= med) || (med >= max) || (min + 7 > med) || (med + 7 > max))
                 {
-                    MessageBox.Show("Verifique se a parametrização do MD está correta");
+                    MessageBox.Show("Check MD settings");
                 }
                 else
                 {
@@ -48,7 +48,7 @@ namespace TruCaptureEmulator
                     {
                         sensor.Set_Parameters(ckbBanner.Checked, ckbTime.Checked, ckbError.Checked, (Trucaptureemulator.MM)cbxMM.SelectedIndex,
                                              (Trucaptureemulator.DM)cbxDM.SelectedIndex, (int)nudVelmin.Value, (int)nudVelmax.Value, (int)nudDistmin.Value,
-                                             (int)nudDistmax.Value, tbxSN.Text, (int)nupHT.Value, md,ckbFixaDecimal.Checked, (int)nudDecimalFixo.Value, (int) nupCaptura.Value);
+                                             (int)nudDistmax.Value, tbxSN.Text, (int)nupHT.Value, md,ckbFixaDecimal.Checked, (int)nudDecimalFixo.Value, (int)nupSpeedCapture.Value);
 
                         sensor.Setor4 = (Trucaptureemulator.Sector4Type) cmbSector4Type.SelectedIndex;
                         sensor.DGMode = (Trucaptureemulator.DG_mode)Enum.Parse(typeof(Trucaptureemulator.DG_mode), cmbDG.Text);
@@ -62,7 +62,7 @@ namespace TruCaptureEmulator
                         }
                         else
                         {
-                            throw new Exception("O valor do número mínimo de strings deve ser menor ou igual ao valor do número máximo");
+                            throw new Exception("The minimum value of number of string should be smaller or equals than the maximum value.");
                         }
                         sensor.Distinfms = Convert.ToInt32(nupInfMultiLeituras.Value);
                         sensor.Distsupms = Convert.ToInt32(nupSupMultLeituras.Value);
@@ -75,7 +75,7 @@ namespace TruCaptureEmulator
                         }
                         else
                         {
-                            throw new Exception("O tempo mínimo entre strings deve ser menor ou igual ao tempo máximo entre strings");
+                            throw new Exception("Minimum interval between strings should be smaller or equals than the maximum value.");
                         }
 
                         sensor.StringDeInterferencia = tbxInterferenciaManual.Text;
@@ -83,17 +83,17 @@ namespace TruCaptureEmulator
 
                         sensor.ID1 = cmbIDs.Text;
 
-                        MessageBox.Show("Parâmetros Salvos com sucesso");
+                        MessageBox.Show("Success saving parameters");
                     }
                     else
                     {
-                        MessageBox.Show("Verifique se a velocidade e a distância mínimas são menores ou iguais às máximas", "Atenção", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        MessageBox.Show("Check speed and distance settings", "Attention", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     }
                 }
             }
             catch (Exception ex)
             {
-                MessageBox.Show(ex.Message,"Atenção",MessageBoxButtons.OK,MessageBoxIcon.Information);
+                MessageBox.Show(ex.Message,"Attention",MessageBoxButtons.OK,MessageBoxIcon.Information);
             }
            
         }
@@ -132,7 +132,7 @@ namespace TruCaptureEmulator
             nupSupMultLeituras.Value = sensor.Distsupms;
             nupTempoMinMultLeituras.Value = sensor.Tempostringsmin;
             nupTempoMaxMultLeituras.Value = sensor.Tempostringsmax;
-            nupCaptura.Value = sensor.VelocidadeCaptura;
+            nupSpeedCapture.Value = sensor.VelocidadeCaptura;
 
             string[] DGstrings = Enum.GetNames(typeof(Trucaptureemulator.DG_mode));
 

@@ -28,7 +28,6 @@ namespace TruCaptureEmulator
 
         public static RSAParameters _publicKey = new RSAParameters();
         public static RSAParameters _privateKey = new RSAParameters();
-        private static string _privateKeyPath = Application.StartupPath + @"\pk.key";
 
         public const int SignDelay = 500;
 

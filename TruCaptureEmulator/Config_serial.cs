@@ -59,7 +59,7 @@ namespace TruCaptureEmulator
             }
             catch
             {
-                MessageBox.Show("Não foram encontradas portas seriais", "Portas seriais indisponíveis", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("There is no serial port available", "Serial ports unavailable", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
 
@@ -69,7 +69,7 @@ namespace TruCaptureEmulator
             {
                 if (cbxPortname.SelectedIndex == -1)
                 {
-                    MessageBox.Show("Selecione a porta desejada");
+                    MessageBox.Show("Select desired serial port");
                     cbxPortname.Focus();
                     return;
                 }
@@ -134,7 +134,7 @@ namespace TruCaptureEmulator
             }
             catch (Exception ex)
             {
-                MessageBox.Show("Problemas ao abrir a porta serial");
+                MessageBox.Show("There was a problem when oppening the serial port.");
             }
         }
 
