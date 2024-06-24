@@ -189,7 +189,6 @@
     <None Include="Resources\SaveButton_Dis.png" />
     <None Include="Resources\SaveButton_pressed.png" />
     <Content Include="trucapture.ico" />
-    <Content Include="Versões.txt" />
     <None Include="Resources\trigger.png" />
     <None Include="Resources\stop2.png" />
     <None Include="Resources\pumalogo.bmp" />

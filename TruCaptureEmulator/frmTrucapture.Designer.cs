@@ -41,12 +41,18 @@
             this.sfdPerfil = new System.Windows.Forms.SaveFileDialog();
             this.ofdPerfil = new System.Windows.Forms.OpenFileDialog();
             this.pnlFunctions = new System.Windows.Forms.Panel();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.cbcISError = new System.Windows.Forms.ComboBox();
+            this.tgbISError = new br.com.ltb.GUI.ToggleButton();
+            this.label15 = new System.Windows.Forms.Label();
             this.usbDesinibe = new br.com.ltb.GUI.UserButton();
             this.nupTempInibe = new System.Windows.Forms.NumericUpDown();
             this.tgbInterferencia = new br.com.ltb.GUI.ToggleButton();
             this.label14 = new System.Windows.Forms.Label();
             this.tgbSimulador = new br.com.ltb.GUI.ToggleButton();
             this.lblSimulador = new System.Windows.Forms.Label();
+            this.slfDirecao = new br.com.ltb.GUI.SelectionFieldComponent();
+            this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.numericUpDown1 = new System.Windows.Forms.NumericUpDown();
             this.ckbMulti = new br.com.ltb.GUI.ToggleButton();
@@ -79,14 +85,9 @@
             this.usbLimpar = new br.com.ltb.GUI.UserButton();
             this.ubtStop = new br.com.ltb.GUI.UserButton();
             this.ubtStart = new br.com.ltb.GUI.UserButton();
-            this.label15 = new System.Windows.Forms.Label();
-            this.tgbISError = new br.com.ltb.GUI.ToggleButton();
-            this.cbcISError = new System.Windows.Forms.ComboBox();
-            this.panel1 = new System.Windows.Forms.Panel();
-            this.label2 = new System.Windows.Forms.Label();
-            this.slfDirecao = new br.com.ltb.GUI.SelectionFieldComponent();
             this.menuStrip1.SuspendLayout();
             this.pnlFunctions.SuspendLayout();
+            this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.usbDesinibe)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.nupTempInibe)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).BeginInit();
@@ -98,7 +99,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.usbLimpar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ubtStop)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ubtStart)).BeginInit();
-            this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // menuStrip1
@@ -221,6 +221,51 @@
             this.pnlFunctions.Size = new System.Drawing.Size(337, 543);
             this.pnlFunctions.TabIndex = 23;
             // 
+            // panel1
+            // 
+            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(250)))), ((int)(((byte)(250)))));
+            this.panel1.Controls.Add(this.cbcISError);
+            this.panel1.Controls.Add(this.tgbISError);
+            this.panel1.Controls.Add(this.label15);
+            this.panel1.Location = new System.Drawing.Point(6, 256);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(326, 58);
+            this.panel1.TabIndex = 44;
+            // 
+            // cbcISError
+            // 
+            this.cbcISError.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold);
+            this.cbcISError.ForeColor = System.Drawing.Color.MidnightBlue;
+            this.cbcISError.FormattingEnabled = true;
+            this.cbcISError.Location = new System.Drawing.Point(15, 31);
+            this.cbcISError.Name = "cbcISError";
+            this.cbcISError.Size = new System.Drawing.Size(293, 24);
+            this.cbcISError.TabIndex = 43;
+            this.cbcISError.SelectedIndexChanged += new System.EventHandler(this.cbcISError_SelectedIndexChanged);
+            // 
+            // tgbISError
+            // 
+            this.tgbISError.Checked = false;
+            this.tgbISError.KnobColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.tgbISError.LineColor = System.Drawing.Color.LightBlue;
+            this.tgbISError.Location = new System.Drawing.Point(213, 5);
+            this.tgbISError.Name = "tgbISError";
+            this.tgbISError.Size = new System.Drawing.Size(48, 25);
+            this.tgbISError.TabIndex = 41;
+            this.tgbISError.Text = "toggleButton5";
+            this.tgbISError.CheckedChanged += new br.com.ltb.GUI.ToggleButton.CheckedC(this.toggleButton1_CheckedChanged);
+            // 
+            // label15
+            // 
+            this.label15.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label15.ForeColor = System.Drawing.Color.MidnightBlue;
+            this.label15.Location = new System.Drawing.Point(2, 6);
+            this.label15.Name = "label15";
+            this.label15.Size = new System.Drawing.Size(205, 22);
+            this.label15.TabIndex = 42;
+            this.label15.Text = "$IS ERROR";
+            this.label15.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
             // usbDesinibe
             // 
             this.usbDesinibe.CustomPressed = br.com.ltb.GUI.UserButton.CustomPressedType.WithoutRetention;
@@ -306,6 +351,39 @@
             this.lblSimulador.TabIndex = 37;
             this.lblSimulador.Text = "SIMULATOR MODE";
             this.lblSimulador.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // slfDirecao
+            // 
+            this.slfDirecao.ArrowColor = System.Drawing.Color.White;
+            this.slfDirecao.BackColor = System.Drawing.Color.Transparent;
+            this.slfDirecao.BorderclickColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(230)))));
+            this.slfDirecao.ClickColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(230)))));
+            this.slfDirecao.Color = System.Drawing.Color.MidnightBlue;
+            this.slfDirecao.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold);
+            this.slfDirecao.ForeColor = System.Drawing.Color.MidnightBlue;
+            this.slfDirecao.Format = br.com.ltb.GUI.SelectionFieldComponent.VisualFormat.Rounded;
+            this.slfDirecao.LineArrowColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.slfDirecao.Location = new System.Drawing.Point(54, 467);
+            this.slfDirecao.Name = "slfDirecao";
+            this.slfDirecao.ScrollDirection = br.com.ltb.GUI.SelectionFieldComponent.Direction.Horizontal;
+            this.slfDirecao.SelectedIndex = -1;
+            this.slfDirecao.SelectedItem = "";
+            this.slfDirecao.Size = new System.Drawing.Size(200, 25);
+            this.slfDirecao.TabIndex = 34;
+            this.slfDirecao.Text = "selectionFieldComponent1";
+            this.slfDirecao.TextBackColor = System.Drawing.Color.White;
+            this.slfDirecao.SelectedIndexChanged += new br.com.ltb.GUI.SelectionFieldComponent.SelectedIndexChangedEventHandler(this.slfDirecao_SelectedIndexChanged);
+            // 
+            // label2
+            // 
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.ForeColor = System.Drawing.Color.MidnightBlue;
+            this.label2.Location = new System.Drawing.Point(5, 446);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(300, 22);
+            this.label2.TabIndex = 33;
+            this.label2.Text = "STRING DIRECTION:";
+            this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // label1
             // 
@@ -698,84 +776,6 @@
             this.ubtStart.TabStop = false;
             this.ubtStart.MouseUp += new System.Windows.Forms.MouseEventHandler(this.ubtStart_MouseUp);
             // 
-            // label15
-            // 
-            this.label15.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label15.ForeColor = System.Drawing.Color.MidnightBlue;
-            this.label15.Location = new System.Drawing.Point(2, 6);
-            this.label15.Name = "label15";
-            this.label15.Size = new System.Drawing.Size(205, 22);
-            this.label15.TabIndex = 42;
-            this.label15.Text = "IS ERROR";
-            this.label15.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            // 
-            // tgbISError
-            // 
-            this.tgbISError.Checked = false;
-            this.tgbISError.KnobColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.tgbISError.LineColor = System.Drawing.Color.LightBlue;
-            this.tgbISError.Location = new System.Drawing.Point(213, 5);
-            this.tgbISError.Name = "tgbISError";
-            this.tgbISError.Size = new System.Drawing.Size(48, 25);
-            this.tgbISError.TabIndex = 41;
-            this.tgbISError.Text = "toggleButton5";
-            this.tgbISError.CheckedChanged += new br.com.ltb.GUI.ToggleButton.CheckedC(this.toggleButton1_CheckedChanged);
-            // 
-            // cbcISError
-            // 
-            this.cbcISError.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold);
-            this.cbcISError.ForeColor = System.Drawing.Color.MidnightBlue;
-            this.cbcISError.FormattingEnabled = true;
-            this.cbcISError.Location = new System.Drawing.Point(15, 31);
-            this.cbcISError.Name = "cbcISError";
-            this.cbcISError.Size = new System.Drawing.Size(293, 24);
-            this.cbcISError.TabIndex = 43;
-            this.cbcISError.SelectedIndexChanged += new System.EventHandler(this.cbcISError_SelectedIndexChanged);
-            // 
-            // panel1
-            // 
-            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(250)))), ((int)(((byte)(250)))));
-            this.panel1.Controls.Add(this.cbcISError);
-            this.panel1.Controls.Add(this.tgbISError);
-            this.panel1.Controls.Add(this.label15);
-            this.panel1.Location = new System.Drawing.Point(6, 256);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(326, 58);
-            this.panel1.TabIndex = 44;
-            // 
-            // label2
-            // 
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.ForeColor = System.Drawing.Color.MidnightBlue;
-            this.label2.Location = new System.Drawing.Point(5, 446);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(300, 22);
-            this.label2.TabIndex = 33;
-            this.label2.Text = "STRING DIRECTION:";
-            this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // slfDirecao
-            // 
-            this.slfDirecao.ArrowColor = System.Drawing.Color.White;
-            this.slfDirecao.BackColor = System.Drawing.Color.Transparent;
-            this.slfDirecao.BorderclickColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(230)))));
-            this.slfDirecao.ClickColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(230)))));
-            this.slfDirecao.Color = System.Drawing.Color.MidnightBlue;
-            this.slfDirecao.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold);
-            this.slfDirecao.ForeColor = System.Drawing.Color.MidnightBlue;
-            this.slfDirecao.Format = br.com.ltb.GUI.SelectionFieldComponent.VisualFormat.Rounded;
-            this.slfDirecao.LineArrowColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.slfDirecao.Location = new System.Drawing.Point(54, 467);
-            this.slfDirecao.Name = "slfDirecao";
-            this.slfDirecao.ScrollDirection = br.com.ltb.GUI.SelectionFieldComponent.Direction.Horizontal;
-            this.slfDirecao.SelectedIndex = -1;
-            this.slfDirecao.SelectedItem = "";
-            this.slfDirecao.Size = new System.Drawing.Size(200, 25);
-            this.slfDirecao.TabIndex = 34;
-            this.slfDirecao.Text = "selectionFieldComponent1";
-            this.slfDirecao.TextBackColor = System.Drawing.Color.White;
-            this.slfDirecao.SelectedIndexChanged += new br.com.ltb.GUI.SelectionFieldComponent.SelectedIndexChangedEventHandler(this.slfDirecao_SelectedIndexChanged);
-            // 
             // frmTrucapture
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -804,13 +804,14 @@
             this.MaximizeBox = false;
             this.Name = "frmTrucapture";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "TRUCapture Emulator";
+            this.Text = "TruCapture Simulator";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.Form1_FormClosing);
             this.Load += new System.EventHandler(this.Form1_Load);
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
             this.pnlFunctions.ResumeLayout(false);
             this.pnlFunctions.PerformLayout();
+            this.panel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.usbDesinibe)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.nupTempInibe)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).EndInit();
@@ -822,7 +823,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.usbLimpar)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.ubtStop)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.ubtStart)).EndInit();
-            this.panel1.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
