@@ -109,7 +109,6 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Checksum.cs" />
-    <Compile Include="ConfiguracaoImagem.cs" />
     <Compile Include="Config_serial.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -119,19 +118,7 @@
     <Compile Include="Crc16.cs" />
     <Compile Include="CRCITT.cs" />
     <Compile Include="Display.cs" />
-    <Compile Include="Config_display.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Config_display.Designer.cs">
-      <DependentUpon>Config_display.cs</DependentUpon>
-    </Compile>
     <Compile Include="Enums.cs" />
-    <Compile Include="FrmMakeURL.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="FrmMakeURL.designer.cs">
-      <DependentUpon>FrmMakeURL.cs</DependentUpon>
-    </Compile>
     <Compile Include="frmTrucapture.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -156,12 +143,6 @@
     <Compile Include="Trucaptureemulator.cs" />
     <EmbeddedResource Include="Config_serial.resx">
       <DependentUpon>Config_serial.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Config_display.resx">
-      <DependentUpon>Config_display.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="FrmMakeURL.resx">
-      <DependentUpon>FrmMakeURL.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmTrucapture.resx">
       <DependentUpon>frmTrucapture.cs</DependentUpon>

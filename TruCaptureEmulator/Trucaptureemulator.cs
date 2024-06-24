@@ -150,7 +150,7 @@ namespace TruCaptureEmulator
         private bool _modoTeste = false;
         private bool _modoSimulador = false;
 
-        private InterferenceMode _modoInterferencia = InterferenceMode.Automatico;
+        private InterferenceMode _modoInterferencia = InterferenceMode.Automatic;
         private bool _interferencia = false;
         private string _stringDeInterferencia = "#§↨";
 
@@ -2694,7 +2694,7 @@ namespace TruCaptureEmulator
                 {
                     return _stringDeInterferencia;
                 }
-                else if (_modoInterferencia == InterferenceMode.Automatico)
+                else if (_modoInterferencia == InterferenceMode.Automatic)
                 {
                     byte[] b = Encoding.Default.GetBytes(entrada);
                     Random r = new Random(DateTime.Now.Millisecond);
@@ -4045,7 +4045,7 @@ namespace TruCaptureEmulator
 
         public enum InterferenceMode
         {           
-            Automatico,
+            Automatic,
             Manual,
             Checksum
         }

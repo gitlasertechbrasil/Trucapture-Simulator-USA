@@ -147,7 +147,7 @@ namespace TruCaptureEmulator
                                 });
                             }
 
-                            AppendText(MessageType.Recebida, header, horaprogramada, false);
+                            AppendText(MessageType.Received, header, horaprogramada, false);
                             sensor.PH(_ph);
                         }
                         else
@@ -232,11 +232,11 @@ namespace TruCaptureEmulator
             if (lido.Contains('\0'))
             {
                 lido = lido.Replace("\0", string.Empty);
-                AppendText(MessageType.Recebida, header, "Received Null characters", false);
+                AppendText(MessageType.Received, header, "Received Null characters", false);
 
             }
 
-            AppendText(MessageType.Recebida, header, lido, false);
+            AppendText(MessageType.Received, header, lido, false);
             lido = CutTrash(lido);
 
             if (lido.StartsWith("$ST"))
@@ -265,7 +265,7 @@ namespace TruCaptureEmulator
                     {
                         header = "[ " + DateTime.Now.ToString("HH:mm:ss-fff") + " ]   ";
                     }
-                    AppendText(MessageType.Enviada, header, resposta, false);
+                    AppendText(MessageType.Sent, header, resposta, false);
                 }
             }
         }
@@ -312,7 +312,7 @@ namespace TruCaptureEmulator
                     BeginInvoke((MethodInvoker)delegate
                     {
 
-                        if (tipo == MessageType.Recebida)
+                        if (tipo == MessageType.Received)
                         {
                             _frmRecebidos?.SetText(header + text + Environment.NewLine);
                         }
@@ -371,7 +371,7 @@ namespace TruCaptureEmulator
             else
             {
 
-                if (tipo == MessageType.Recebida)
+                if (tipo == MessageType.Received)
                 {
                     _frmRecebidos?.SetText(header + text + Environment.NewLine);
                 }
@@ -639,7 +639,7 @@ namespace TruCaptureEmulator
                         }
                     });
                 }
-                AppendText(MessageType.Enviada, header, e, trigger);
+                AppendText(MessageType.Sent, header, e, trigger);
             }
             catch (Exception)
             {
@@ -881,17 +881,6 @@ namespace TruCaptureEmulator
                 ckbMulti.Checked = false;
                 ckbMulti.Enabled = false;
             }
-        }
-
-        private void ckbDisplay_CheckedChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void displayToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            frmDisplayConfig f = new frmDisplayConfig(sensor);
-            f.Show();
         }
 
         private void ckbMulti_CheckedChanged(object sender, EventArgs e)
@@ -1181,8 +1170,8 @@ namespace TruCaptureEmulator
 
         private enum MessageType
         {
-            Enviada,
-            Recebida
+            Sent,
+            Received
         }
 
         private void slfDirecao_SelectedIndexChanged(object sender, SelectionFieldEventArgs args)
