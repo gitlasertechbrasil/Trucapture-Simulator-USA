@@ -541,7 +541,7 @@ namespace TruCaptureEmulator
             }
             else
             {
-                MessageBox.Show("Não foi detectada nenhuma porta serial", "Serial não encontrada", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("There are no serial ports", "Serial port not found", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
 
             cbcISError.Text = "62 - APD_FAILED";
@@ -684,7 +684,7 @@ namespace TruCaptureEmulator
             }
             catch (Exception ex)
             {
-                MessageBox.Show("Não foram encontradas portas seriais disponíveis", "Atenção", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                MessageBox.Show("There are no serial ports available", "Attention", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
 
             try
@@ -726,7 +726,7 @@ namespace TruCaptureEmulator
             }
             catch (Exception ex)
             {
-                MessageBox.Show("Não foram encontradas portas seriais disponíveis", "Atenção", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                MessageBox.Show("There are no serial ports available", "Attention", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
         }
 
@@ -787,7 +787,7 @@ namespace TruCaptureEmulator
             {
                 sfdPerfil.InitialDirectory = Path.GetDirectoryName(sfdPerfil.FileName);
                 sensor.save_file(sfdPerfil.FileName);
-                MessageBox.Show("Parametros salvos com sucesso", "Atenção", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                MessageBox.Show("Success saving parameters", "Attention", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
         }
 
@@ -976,7 +976,7 @@ namespace TruCaptureEmulator
                 }
                 catch (Exception)
                 {
-                    MessageBox.Show("Falha ao tentar abrir porta Serial", "Atenção", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    MessageBox.Show("Fail oppening serial port", "Attention", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     usbOnOff.Pressed = false;
                     return;
                 }

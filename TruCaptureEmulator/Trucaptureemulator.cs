@@ -76,9 +76,7 @@ namespace TruCaptureEmulator
         private MU MU_value;
         private bool inibe;
         private bool mdlimit;
-        private Display d;
         private bool display = false;
-        private Display.Period periodo;
         private bool display_exists = false;
         private string IP_display;
         private int porta;
@@ -259,24 +257,7 @@ namespace TruCaptureEmulator
         {
             get { return tempostringsmax; }
             set { tempostringsmax = value; }
-        }
-
-        public bool Display_mode
-        {
-            get { return display_mode; }
-            set
-            {
-                display_mode = value;
-                if (display_mode)
-                {
-                    d.Mode = TruCaptureEmulator.Display.OperationMode.SPEED;
-                }
-                else
-                {
-                    d.Mode = TruCaptureEmulator.Display.OperationMode.DISTANCE;
-                }
-            }
-        }
+        }      
 
         public int Velocidade
         {
@@ -294,60 +275,7 @@ namespace TruCaptureEmulator
         {
             get { return IP_display; }
             set { IP_display = value; }
-        }
-
-        public Display.Period Periodo
-        {
-            get { return periodo; }
-            set { periodo = value; }
-        }
-
-        public bool Display_exists
-        {
-            get { return display_exists; }
-        }
-
-        public bool Display
-        {
-            get { return display; }
-            set { display = value; }
-        }
-
-        public void New_Display(string IP, int porta, int velocidade)
-        {
-            try
-            {
-                this.IP_display = IP;
-                this.porta = porta;
-                this.velocidade = velocidade;
-                d = new Display(IP, porta, velocidade);
-                d.Start();
-                d.exceptions_display += new Display.Exceptions_Display(exceptions_display);
-                display_exists = true;
-            }
-            catch
-            {
-                throw new Exception("Não foi possível conectar-se ao display");
-            }
-        }
-
-        void exceptions_display(object sender, string text)
-        {
-            this.enviapacote(this, text, false);
-        }
-
-        public void Set_Period(DateTime begin, DateTime end)
-        {
-            periodo.begin = begin;
-            periodo.end = end;
-            d.Interval = periodo;
-        }
-
-        public void Set_Speed(int speed)
-        {
-            d.Speed = speed;
-        }
-
+        } 
         public void Set_Mode(bool mode)
         {
 
@@ -2430,17 +2358,7 @@ namespace TruCaptureEmulator
                                 {
                                     enviapacote(this, ex.Message, false);
                                 }
-                                try
-                                {
-                                    if (display && d.Is_running)
-                                    {
-                                        d.Send(write + "\r\n");
-                                    }
-                                }
-                                catch (Exception ex)
-                                {
-                                    enviapacote(this, ex.Message, false);
-                                }
+                               
                                 if (multistrings || _modoSimulador)
                                 {
                                     if (timesBetweenStrings != null && timesBetweenStrings.Count == strings.Count)
@@ -3209,7 +3127,7 @@ namespace TruCaptureEmulator
             //if (!File.Exists(atbLog + "parameters" + ".tcc"))
             if (!File.Exists(filename))
             {
-                throw new Exception("Não existe nenhuma configuração salva");
+                throw new Exception("There is no saved setting");
             }
             else
             {

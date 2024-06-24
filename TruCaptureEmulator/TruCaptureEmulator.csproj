@@ -117,8 +117,6 @@
     </Compile>
     <Compile Include="Crc16.cs" />
     <Compile Include="CRCITT.cs" />
-    <Compile Include="Display.cs" />
-    <Compile Include="Enums.cs" />
     <Compile Include="frmTrucapture.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -139,7 +137,6 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Socket_Serial.cs" />
     <Compile Include="Trucaptureemulator.cs" />
     <EmbeddedResource Include="Config_serial.resx">
       <DependentUpon>Config_serial.cs</DependentUpon>
@@ -176,7 +173,6 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
-    <Content Include="favicon.ico" />
     <None Include="Resources\Close Window-24.png" />
     <None Include="Resources\limpar.png" />
     <None Include="Resources\close.png" />
