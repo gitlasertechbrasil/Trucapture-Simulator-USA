@@ -220,36 +220,6 @@
     </BootstrapperPackage>
   </ItemGroup>
   <ItemGroup>
-    <Reference Include="br.com.ltb.Camera-AnyCPU, Version=2.5.3.2, Culture=neutral, processorArchitecture=AnyCPU" Condition="'$(Configuration)|$(Platform)' == 'Debug|AnyCPU' or '$(Configuration)|$(Platform)' == 'Release|AnyCPU'">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>C:\DLLS2\Release\proprietarias\br.com.ltb.Camera\AnyCPU\2.5.3.2\net-4.6.2\br.com.ltb.Camera-AnyCPU.dll</HintPath>
-      <Private>True</Private>
-    </Reference>
-    <Reference Include="br.com.ltb.Camera-x64, Version=2.5.3.2, Culture=neutral, processorArchitecture=AMD64" Condition="'$(Configuration)|$(Platform)' == 'Debug|x64' or '$(Configuration)|$(Platform)' == 'Release|x64'">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>C:\DLLS2\Release\proprietarias\br.com.ltb.Camera\x64\2.5.3.2\net-4.6.2\br.com.ltb.Camera-x64.dll</HintPath>
-      <Private>True</Private>
-    </Reference>
-    <Reference Include="br.com.ltb.Camera-x86, Version=2.5.3.2, Culture=neutral, processorArchitecture=x86" Condition="'$(Configuration)|$(Platform)' == 'Debug|x86' or '$(Configuration)|$(Platform)' == 'Release|x86'">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>C:\DLLS2\Release\proprietarias\br.com.ltb.Camera\x86\2.5.3.2\net-4.6.2\br.com.ltb.Camera-x86.dll</HintPath>
-      <Private>True</Private>
-    </Reference>
-    <Reference Include="br.com.ltb.ltb.interop.desktop-AnyCPU, Version=1.2.0.1, Culture=neutral, processorArchitecture=AnyCPU" Condition="'$(Configuration)|$(Platform)' == 'Debug|AnyCPU' or '$(Configuration)|$(Platform)' == 'Release|AnyCPU'">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>C:\DLLS2\Release\proprietarias\br.com.ltb.ltb.interop.desktop\AnyCPU\1.2.0.1\net-4.6.2\br.com.ltb.ltb.interop.desktop-AnyCPU.dll</HintPath>
-      <Private>True</Private>
-    </Reference>
-    <Reference Include="br.com.ltb.ltb.interop.desktop-x64, Version=1.2.0.1, Culture=neutral, processorArchitecture=AMD64" Condition="'$(Configuration)|$(Platform)' == 'Debug|x64' or '$(Configuration)|$(Platform)' == 'Release|x64'">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>C:\DLLS2\Release\proprietarias\br.com.ltb.ltb.interop.desktop\x64\1.2.0.1\net-4.6.2\br.com.ltb.ltb.interop.desktop-x64.dll</HintPath>
-      <Private>True</Private>
-    </Reference>
-    <Reference Include="br.com.ltb.ltb.interop.desktop-x86, Version=1.2.0.1, Culture=neutral, processorArchitecture=x86" Condition="'$(Configuration)|$(Platform)' == 'Debug|x86' or '$(Configuration)|$(Platform)' == 'Release|x86'">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>C:\DLLS2\Release\proprietarias\br.com.ltb.ltb.interop.desktop\x86\1.2.0.1\net-4.6.2\br.com.ltb.ltb.interop.desktop-x86.dll</HintPath>
-      <Private>True</Private>
-    </Reference>
     <Reference Include="br.com.ltb.GUI-AnyCPU, Version=1.3.0.1, Culture=neutral, processorArchitecture=AnyCPU" Condition="'$(Configuration)|$(Platform)' == 'Debug|AnyCPU' or '$(Configuration)|$(Platform)' == 'Release|AnyCPU'">
       <SpecificVersion>False</SpecificVersion>
       <HintPath>C:\DLLS2\Release\proprietarias\br.com.ltb.GUI\AnyCPU\1.3.0.1\net-4.6.2\br.com.ltb.GUI-AnyCPU.dll</HintPath>

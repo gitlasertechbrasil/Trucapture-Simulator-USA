@@ -1,5 +1,4 @@
-﻿using br.com.ltb.Camera.Pumatronix;
-using br.com.ltb.GUI;
+﻿using br.com.ltb.GUI;
 using br.com.ltb.Xml;
 using System;
 using System.Collections.Generic;
