@@ -3097,8 +3097,7 @@ namespace TruCaptureEmulator
                            "Tempo " + time + ";\r\n" + "Inibe " + inibe + ";\r\n" + "Fixar " + mdlimit + ";\r\n" + "Multistrings " + multistrings + ";\r\n" + "Direction " + Direction + ";\r\n" + "IntervaloVariavel " + _variableTime + ";\r\n" +
                             "SimulaErros " + _simulaErros + ";\r\n" + "ErroBoot " + _PDError + ";\r\nHabilitaBoard " + _board + ";\r\nVelocidadeCaptura " + _velocidadeDeCaptura + ";\r\nModo Teste " + _modoTeste.ToString() + 
                             ";\r\nModo Simulador " + _modoSimulador.ToString() + ";\r\nInterferencia " + _interferencia.ToString() + ";\r\nModo Interferencia " + _modoInterferencia.ToString() + 
-                            ";\r\nInterferencia Manual "  + _stringDeInterferencia + ";\r\n" + "ID " + ID + ";\r\nModelo Camera " + Program._currentCameraModel + ";\r\nFwVCamera " + Program.version + ";\r\nsenhaCamera  " + Program.senha + 
-                            ";\r\nsenhaAPI " + Program.senhaAPI + ";\r\n" + "HasDS " + Program.HasDS + ";\r\n" + "DSDefault " + Program.DSDefault + ";\r\n" + "IS " + ISError.ToString() + ";\r\n" +
+                            ";\r\nInterferencia Manual "  + _stringDeInterferencia + ";\r\n" + "ID " + ID + ";\r\nIS " + ISError.ToString() + ";\r\n" +
                             "ISERRORMessage " + ISERRORMessage.ToString() + ";\r\n" + "ISRandom " + ISRandom.ToString() + ";";
 
             if (!Directory.Exists(atbLog))
@@ -3593,68 +3592,6 @@ namespace TruCaptureEmulator
                         ID = param;
                     }
                     catch (Exception)
-                    {
-
-                    }
-
-                    try
-                    {
-                        param = ReadParameter("Modelo Camera", arquivo);
-                        Program._currentCameraModel = param;
-                    }
-                    catch (Exception)
-                    {
-
-                    }
-
-                    try
-                    {
-                        param = ReadParameter("FwVCamera", arquivo);
-                        Program.version = param;
-                    }
-                    catch (Exception)
-                    {
-
-                    }
-
-                    try
-                    {
-                        param = ReadParameter("senhaCamera", arquivo);
-                        Program.senha = param;
-                    }
-                    catch (Exception)
-                    {
-
-                    }
-
-                    try
-                    {
-                        param = ReadParameter("senhaAPI", arquivo);
-                        Program.senhaAPI = Convert.ToBoolean(param);
-                    }
-                    catch (Exception)
-                    {
-
-                    }
-
-                    try
-                    {
-                        param = ReadParameter("HasDS", arquivo);
-                        Program.HasDS = Convert.ToBoolean(param);
-
-                    }
-                    catch (Exception ex)
-                    {
-
-                    }
-
-                    try
-                    {
-                        param = ReadParameter("DSDefault", arquivo);
-                        Program.DSDefault = Convert.ToBoolean(param);
-
-                    }
-                    catch (Exception ex)
                     {
 
                     }

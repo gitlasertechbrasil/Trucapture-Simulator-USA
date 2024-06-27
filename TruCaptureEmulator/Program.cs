@@ -1,5 +1,4 @@
-﻿using br.com.ltb.Camera.Pumatronix;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
@@ -14,22 +13,7 @@ namespace TruCaptureEmulator
     {
 
         public static bool programarodando = true;
-        public static List<byte[]> imgvideo = new List<byte[]>();
-        public static List<byte[]> imgphoto = new List<byte[]>();
-        public static List<ParameterCGI> ParameterList = new List<ParameterCGI>();
-        public static string _currentCameraModel = "ITSCAM401";
-        public static string version = "v19.2.4";
-        public static string buildVersion = string.Empty;
         public static parameters parametros;
-        public static bool senhaAPI = false;
-        public static string senha = "admin:123";
-        public static bool HasDS = false;
-        public static bool DSDefault = false;
-
-        public static RSAParameters _publicKey = new RSAParameters();
-        public static RSAParameters _privateKey = new RSAParameters();
-
-        public const int SignDelay = 500;
 
         /// <summary>
         /// The main entry point for the application.

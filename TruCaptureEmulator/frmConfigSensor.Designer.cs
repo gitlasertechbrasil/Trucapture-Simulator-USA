@@ -37,6 +37,8 @@
             this.label2 = new System.Windows.Forms.Label();
             this.cbxMM = new System.Windows.Forms.ComboBox();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.nupSpeedCapture = new System.Windows.Forms.NumericUpDown();
+            this.label19 = new System.Windows.Forms.Label();
             this.nudVelmax = new System.Windows.Forms.NumericUpDown();
             this.nudVelmin = new System.Windows.Forms.NumericUpDown();
             this.label4 = new System.Windows.Forms.Label();
@@ -86,10 +88,9 @@
             this.groupBox9 = new System.Windows.Forms.GroupBox();
             this.cmbIDs = new System.Windows.Forms.ComboBox();
             this.label25 = new System.Windows.Forms.Label();
-            this.label19 = new System.Windows.Forms.Label();
-            this.nupSpeedCapture = new System.Windows.Forms.NumericUpDown();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.nupSpeedCapture)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.nudVelmax)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.nudVelmin)).BeginInit();
             this.groupBox3.SuspendLayout();
@@ -110,7 +111,6 @@
             this.groupBox6.SuspendLayout();
             this.groupBox8.SuspendLayout();
             this.groupBox9.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.nupSpeedCapture)).BeginInit();
             this.SuspendLayout();
             // 
             // groupBox1
@@ -220,6 +220,27 @@
             this.groupBox2.TabIndex = 6;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Speed Range";
+            // 
+            // nupSpeedCapture
+            // 
+            this.nupSpeedCapture.Location = new System.Drawing.Point(88, 57);
+            this.nupSpeedCapture.Maximum = new decimal(new int[] {
+            322,
+            0,
+            0,
+            0});
+            this.nupSpeedCapture.Name = "nupSpeedCapture";
+            this.nupSpeedCapture.Size = new System.Drawing.Size(81, 20);
+            this.nupSpeedCapture.TabIndex = 8;
+            // 
+            // label19
+            // 
+            this.label19.AutoSize = true;
+            this.label19.Location = new System.Drawing.Point(23, 59);
+            this.label19.Name = "label19";
+            this.label19.Size = new System.Drawing.Size(47, 13);
+            this.label19.TabIndex = 7;
+            this.label19.Text = "Capture:";
             // 
             // nudVelmax
             // 
@@ -603,7 +624,7 @@
             0,
             0});
             this.nupTempoMinMultLeituras.Minimum = new decimal(new int[] {
-            30,
+            10,
             0,
             0,
             0});
@@ -611,7 +632,7 @@
             this.nupTempoMinMultLeituras.Size = new System.Drawing.Size(81, 20);
             this.nupTempoMinMultLeituras.TabIndex = 5;
             this.nupTempoMinMultLeituras.Value = new decimal(new int[] {
-            50,
+            10,
             0,
             0,
             0});
@@ -633,7 +654,7 @@
             this.nupTempoMaxMultLeituras.Size = new System.Drawing.Size(81, 20);
             this.nupTempoMaxMultLeituras.TabIndex = 6;
             this.nupTempoMaxMultLeituras.Value = new decimal(new int[] {
-            50,
+            10000,
             0,
             0,
             0});
@@ -786,33 +807,12 @@
             this.label25.TabIndex = 3;
             this.label25.Text = "ID:";
             // 
-            // label19
-            // 
-            this.label19.AutoSize = true;
-            this.label19.Location = new System.Drawing.Point(23, 59);
-            this.label19.Name = "label19";
-            this.label19.Size = new System.Drawing.Size(47, 13);
-            this.label19.TabIndex = 7;
-            this.label19.Text = "Capture:";
-            // 
-            // nupSpeedCapture
-            // 
-            this.nupSpeedCapture.Location = new System.Drawing.Point(88, 57);
-            this.nupSpeedCapture.Maximum = new decimal(new int[] {
-            322,
-            0,
-            0,
-            0});
-            this.nupSpeedCapture.Name = "nupSpeedCapture";
-            this.nupSpeedCapture.Size = new System.Drawing.Size(81, 20);
-            this.nupSpeedCapture.TabIndex = 8;
-            // 
             // frmConfigSensor
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(534, 583);
+            this.ClientSize = new System.Drawing.Size(534, 585);
             this.Controls.Add(this.groupBox9);
             this.Controls.Add(this.groupBox8);
             this.Controls.Add(this.groupBox7);
@@ -844,6 +844,7 @@
             this.groupBox1.PerformLayout();
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.nupSpeedCapture)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.nudVelmax)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.nudVelmin)).EndInit();
             this.groupBox3.ResumeLayout(false);
@@ -870,7 +871,6 @@
             this.groupBox8.PerformLayout();
             this.groupBox9.ResumeLayout(false);
             this.groupBox9.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.nupSpeedCapture)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
