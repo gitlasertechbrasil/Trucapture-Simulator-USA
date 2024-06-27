@@ -2296,7 +2296,7 @@ namespace TruCaptureEmulator
                     if (_variableTime)
                     {
                         Random r = new Random();
-                        localTime = r.Next(tempostringsmin, tempostringsmax);
+                        localTime = r.Next(10, time);
                     }
 
                     //timeout.Start();
